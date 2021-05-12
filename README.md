@@ -11,5 +11,8 @@ Need a Broker: Celery requires a solution to send and receive messages; usually 
 •	Redis
 •	AmazonSQS
 
+First we need to install a broker. For this we will be using Redis. To install this, run:
+$ pip install redis
+
 How to install Celery:
 $ pip install celery
