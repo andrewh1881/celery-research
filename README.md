@@ -47,7 +47,7 @@ In order to utilize celery, there is a web development framework called Django t
 
 I also was not able to get any output from when I run the command to call the celery worker. I have searched dozens of tutorials and there seems to not be any solid tutorial that takes you from nothing in to having a fully running small program. A lot of them assumes you already know a lot about web development and working knowledge of Django or other frameworks. I followed these tutorials and they would always throw in some other program or framework and expect you to fully understand how to use them. So I hit a dead end in my research.
 
-Some things I tried were to switch the broker I used from RabbitMQ to Redis. RabbitMQ gave me a couple problems even starting the broker and I found redis was a lot easier to start. I also tried
+Some things I tried were to switch the broker I used from RabbitMQ to Redis. RabbitMQ gave me a couple problems even starting the broker and I found redis was a lot easier to start. I also tried following different tutorials but like I said before, all of them just assumed you have had previous experience using web development tools or frameworks like Django so I was not able to make progress with getting my tutorial to actually work.
 
 If you have an understanding of Django and would like to continue to explore celery, I recommend this tutorial because it seems easy to follow and explains a lot:
 
