@@ -42,3 +42,8 @@ Now we need to have an application to run on the celery worker server. Please se
 
 To start the celery worker server with your hello world file, now run:
 $ celery -A celery-hello worker --loglevel=INFO
+
+In order to utilize celery, there is a web development framework called Django that is really powerful, but takes a lot of work to set up. It is really tricky to get everything working correctly and it depends a lot on your OS and other variables. I was not able to impliment a more complex tutorial because there were a lot of new components that I was not able to get working. If you are interested in web development and python, I highly recommend trying tutorials that include celery, a broker, and Django in order to create some really cool projects. I will include links to websites that hae great tutorials.
+
+Django tutorial: https://medium.com/swlh/python-developers-celery-is-a-must-learn-technology-heres-how-to-get-started-578f5d63fab3
+
