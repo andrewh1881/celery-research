@@ -46,9 +46,9 @@ $ celery -A celery-hello worker --loglevel=INFO
 
 In order to utilize celery, there is a web development framework called Django that is really powerful, but takes a lot of work to set up. It is really tricky to get everything working correctly and it depends a lot on your OS and other variables. I was not able to impliment a more complex tutorial because there were a lot of new components that I was not able to get working. You need all parts of your computer to be set up perfectly for all the parts to be able to talk to each other. If you are interested in web development and python, I highly recommend trying tutorials that include celery, a broker, and Django in order to create some really cool projects. I will include links to websites that hae great tutorials.
 
-Django tutorial: https://medium.com/swlh/python-developers-celery-is-a-must-learn-technology-heres-how-to-get-started-578f5d63fab3
 
 I also was not able to get any output from when I run the command to call the celery worker. I have searched dozens of tutorials and there seems to not be any solid tutorial that takes you from nothing in to having a fully running small program. A lot of them assumes you already know a lot about web development and working knowledge of Django or other frameworks. I followed these tutorials and they would always throw in some other program or framework and expect you to fully understand how to use them. So I hit a dead end in my research.
 
 If you have an understanding of Django and would like to continue to explore celery, I recommend this tutorial because it seems easy to follow and explains a lot:
-https://medium.com/swlh/python-developers-celery-is-a-must-learn-technology-heres-how-to-get-started-578f5d63fab3
+
+Django+Redis+Celery tutorial: https://medium.com/swlh/python-developers-celery-is-a-must-learn-technology-heres-how-to-get-started-578f5d63fab3
