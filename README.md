@@ -25,28 +25,20 @@ How to install Celery:
 $ pip install celery
 
 If using macOS, you may need to use brew in order to download both the broker and celery. Using brew, use these commands instead:
-
 $ brew install redis
-
 $ brew install celery
 
 To start the broker to actually be able to communicate with celery, run:
-
 $ redis-server
-
 or:
-
 $ brew service start redis
 
 
 As a sanity check, you can run:
-
 $ redis-cli ping
-
 If redis is working correctly it should give you the feedback: PONG
 
 Now we need to have an application to run on the celery worker server. Please see the celery-hello.py
 
 To start the celery worker server with your hello world file, now run:
-
 $ celery -A celery-hello worker --loglevel=INFO
