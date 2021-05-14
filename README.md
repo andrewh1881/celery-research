@@ -5,17 +5,16 @@ Celery is a task queue implementation for Python web applications used to asynch
 
 What is a task queue? A task queue is a mechanism that distributes work across multiple threads or machines
 
-Why would this be useful? Celery is very useful because it allows you to quickly implement task queues for many workers. Celery takes care of the hard part which is  appropriately receiving tasks and assigning them to workers.
+Why would this be useful? Celery is very useful because it allows you to quickly implement task queues for many workers. Celery takes care of the hard part which is  appropriately receiving tasks and assigning them to workers. Say you have a bunch of tasks and some or all of them long running, and we want to queue them up,  forget about them, and then have the ability to add new tasks when needed, you will want to use a task queue. Also, if you need a large amount of computing power or concurrency, then you especially want to use a task queue. 
 
-Celery compared to other parallel systems: Celery is very similar to SLURM.
+Celery compared to other parallel systems: Celery is comparable to SLURM. People who use SLURM as their cluster managers look to celery to be their new task manager because of its simplicity and how autonomous it is.
 
 What are the different types of Celery? 
 There are two types of Celery: Celery daemon (Celeryd) and Celerybeat. Celeryd actually executes the tasks while Celerybeat schedules the tasks. A good way to think about the differences is best described by Full Stack Python: “Think of Celeryd as a tunnel-vision set of one or more workers that handle whatever tasks you put in front of them. Each worker will perform a task and when the task is completed will pick up the next one. The cycle will repeat continously, only waiting idly when there are no more tasks to put in front of them.
 Celerybeat on the other hand is like a boss who keeps track of when tasks should be executed. Your application can tell Celerybeat to execute a task at time intervals, such as every 5 seconds or once a week. Celerybeat can also be instructed to run tasks on a specific date or time, such as 5:03pm every Sunday. When the interval or specific time is hit, Celerybeat will hand the job over to Celeryd to execute on the next available worker.”
-Here is a link to the article: https://www.fullstackpython.com/celery.html
+Here is a link to the full article: https://www.fullstackpython.com/celery.html
 
-
-Need a Broker: Celery requires a solution to send and receive messages. This comes as separate service called a message broker. Some options are:
+Need a Broker: Celery communicates via messages, and you need broker to communicate between the clients(tasks) and workers(resources. To start a task the client will add a message to the queue, and then the broker will deliver that message to a worker. Some options of brokers to use are:
 •	RabbitMQ
 •	Redis
 •	AmazonSQS
